@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">AI 仿真助手</view>
+    <view class="chat-box">
+      <view wx:for="{{messages}}" wx:key="index" class="msg {{item.role}}">{{item.text}}</view>
+    </view>
+    <view class="input-row">
+      <input class="input" placeholder="输入你的问题，例如：如何设置更稳定的时间步长？" value="{{draft}}" bindinput="onInput" />
+      <button class="btn-primary send" bindtap="send">发送</button>
+    </view>
+  </view>
+</view>

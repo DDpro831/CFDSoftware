@@ -1,0 +1,49 @@
+.container {
+  padding: 24rpx;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.label {
+  color: #4a638f;
+  font-size: 26rpx;
+}
+
+.input {
+  width: 220rpx;
+  background: #f7fbff;
+  border: 1rpx solid #d7e5fb;
+  border-radius: 10rpx;
+  padding: 12rpx 16rpx;
+  font-size: 26rpx;
+  color: #2e456f;
+}
+
+.canvas-card {
+  margin-bottom: 30rpx;
+}
+
+.canvas {
+  width: 600rpx;
+  height: 600rpx;
+  border: 1rpx solid #d7e5fb;
+  border-radius: 12rpx;
+  background: #eef5ff;
+}
+
+.tips {
+  margin-top: 12rpx;
+  color: #6c82a8;
+  font-size: 22rpx;
+}
+
+.result {
+  margin-top: 14rpx;
+  border-top: 1rpx solid #e4eefc;
+  padding-top: 10rpx;
+}

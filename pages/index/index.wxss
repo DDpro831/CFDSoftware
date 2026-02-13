@@ -2,8 +2,24 @@
   padding: 24rpx;
 }
 
+.hero {
+  border: 1rpx solid #dbe8fb;
+  background: linear-gradient(135deg, #f6fbff, #eef6ff);
+}
+
+.subtitle,
+.desc {
+  color: #6f84a8;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.desc {
+  margin-bottom: 12rpx;
+}
+
 .result {
   margin-top: 14rpx;
-  border-top: 1rpx solid #2d323b;
+  border-top: 1rpx solid #e4eefc;
   padding-top: 10rpx;
 }
