@@ -1,0 +1,9 @@
+.container {
+  padding: 24rpx;
+}
+
+.result {
+  margin-top: 14rpx;
+  border-top: 1rpx solid #2d323b;
+  padding-top: 10rpx;
+}
