@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/sim2d/index",
+    "pages/chat/index",
+    "pages/profile/index"
   ],
   "window": {
     "navigationBarTitleText": "CFD 仿真助手",
@@ -8,6 +11,26 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#111111",
     "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#9aa0aa",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#12141a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "仿真中心"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "text": "AI 对话"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
