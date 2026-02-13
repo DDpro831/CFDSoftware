@@ -1,4 +1,3 @@
-const { runCavitySimulation } = require('../../utils/sim2d');
 const { runWaterHammerSimulation } = require('../../utils/waterHammer');
 const { calcInternalConvection } = require('../../utils/physics');
 
@@ -8,28 +7,13 @@ function round4(x) {
 
 Page({
   data: {
-    sim2d: null,
     hammer: null,
     props: null
   },
 
-  run2D() {
-    const result = runCavitySimulation({
-      nx: 31,
-      ny: 31,
-      steps: 80,
-      dt: 0.001,
-      nu: 0.1,
-      lidU: 1
-    });
-
-    const cx = Math.floor(31 / 2);
-    const cy = Math.floor(31 / 2);
-    this.setData({
-      sim2d: {
-        centerU: round4(result.u[cy][cx]),
-        centerV: round4(result.v[cy][cx])
-      }
+  goTo2D() {
+    wx.navigateTo({
+      url: '/pages/sim2d/index'
     });
   },
 

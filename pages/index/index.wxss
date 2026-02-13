@@ -2,6 +2,21 @@
   padding: 24rpx;
 }
 
+.hero {
+  border: 1rpx solid #2d323b;
+}
+
+.subtitle,
+.desc {
+  color: #a9b0bb;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.desc {
+  margin-bottom: 12rpx;
+}
+
 .result {
   margin-top: 14rpx;
   border-top: 1rpx solid #2d323b;
