@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">二维仿真参数</view>
+
+    <view class="form-row">
+      <text class="label">网格数 N（建议 21-81）</text>
+      <input class="input" type="number" value="{{form.nx}}" data-key="nx" bindinput="onInput" />
+    </view>
+
+    <view class="form-row">
+      <text class="label">迭代步数</text>
+      <input class="input" type="number" value="{{form.steps}}" data-key="steps" bindinput="onInput" />
+    </view>
+
+    <view class="form-row">
+      <text class="label">时间步长 dt</text>
+      <input class="input" type="digit" value="{{form.dt}}" data-key="dt" bindinput="onInput" />
+    </view>
+
+    <view class="form-row">
+      <text class="label">黏性系数 ν</text>
+      <input class="input" type="digit" value="{{form.nu}}" data-key="nu" bindinput="onInput" />
+    </view>
+
+    <view class="form-row">
+      <text class="label">顶盖速度 U</text>
+      <input class="input" type="digit" value="{{form.lidU}}" data-key="lidU" bindinput="onInput" />
+    </view>
+
+    <button class="btn-primary" bindtap="runSimulation">开始仿真</button>
+
+    <view wx:if="{{sim2d}}" class="result">
+      <view class="kv-row"><text>中心点 u</text><text>{{sim2d.centerU}}</text></view>
+      <view class="kv-row"><text>中心点 v</text><text>{{sim2d.centerV}}</text></view>
+      <view class="kv-row"><text>最大速度</text><text>{{sim2d.maxSpeed}}</text></view>
+      <view class="kv-row"><text>网格规模</text><text>{{sim2d.grid}}</text></view>
+    </view>
+  </view>
+
+  <view class="card canvas-card">
+    <view class="section-title">仿真结果画布</view>
+    <canvas class="canvas" canvas-id="flowCanvas" style="width: {{canvasPx}}px; height: {{canvasPx}}px;"></canvas>
+    <text class="tips">采用兼容性更高的十六进制色值绘图，颜色越暖代表速度越高。</text>
+  </view>
+</view>

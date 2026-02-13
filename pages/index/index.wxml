@@ -1,15 +1,18 @@
 <view class="container">
+  <view class="hero card">
+    <view class="section-title">CFD 仿真中心</view>
+    <text class="subtitle">选择仿真类型，快速查看关键结果与工程指标。</text>
+  </view>
+
   <view class="card">
     <view class="section-title">二维流动仿真（Lid-Driven Cavity）</view>
-    <button class="btn-primary" bindtap="run2D">运行二维仿真</button>
-    <view wx:if="{{sim2d}}" class="result">
-      <view class="kv-row"><text>中心点 u</text><text>{{sim2d.centerU}}</text></view>
-      <view class="kv-row"><text>中心点 v</text><text>{{sim2d.centerV}}</text></view>
-    </view>
+    <text class="desc">支持自定义网格、迭代步数与顶盖速度，进入独立页面查看仿真图形和结果。</text>
+    <button class="btn-primary" bindtap="goTo2D">进入二维仿真</button>
   </view>
 
   <view class="card">
     <view class="section-title">管道水击仿真（MOC）</view>
+    <text class="desc">快速评估阀门关闭产生的瞬态压力峰值。</text>
     <button class="btn-primary" bindtap="runHammer">运行水击仿真</button>
     <view wx:if="{{hammer}}" class="result">
       <view class="kv-row"><text>Joukowsky ΔH (m)</text><text>{{hammer.jowskyDeltaH}}</text></view>
@@ -19,6 +22,7 @@
 
   <view class="card">
     <view class="section-title">一维管道物性与换热</view>
+    <text class="desc">计算 Re / Pr / Nu 以及对流换热系数 h。</text>
     <button class="btn-primary" bindtap="runProps">计算 Re / Pr / Nu</button>
     <view wx:if="{{props}}" class="result">
       <view class="kv-row"><text>Re</text><text>{{props.re}}</text></view>
