@@ -1,0 +1,8 @@
+{
+  "name": "cfdsoftware-miniprogram",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/physics.test.js && node tests/simulations.test.js"
+  }
+}

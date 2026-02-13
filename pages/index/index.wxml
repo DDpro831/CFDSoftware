@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">二维流动仿真（Lid-Driven Cavity）</view>
+    <button class="btn-primary" bindtap="run2D">运行二维仿真</button>
+    <view wx:if="{{sim2d}}" class="result">
+      <view class="kv-row"><text>中心点 u</text><text>{{sim2d.centerU}}</text></view>
+      <view class="kv-row"><text>中心点 v</text><text>{{sim2d.centerV}}</text></view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">管道水击仿真（MOC）</view>
+    <button class="btn-primary" bindtap="runHammer">运行水击仿真</button>
+    <view wx:if="{{hammer}}" class="result">
+      <view class="kv-row"><text>Joukowsky ΔH (m)</text><text>{{hammer.jowskyDeltaH}}</text></view>
+      <view class="kv-row"><text>最大末端水头 (m)</text><text>{{hammer.maxOutletHead}}</text></view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">一维管道物性与换热</view>
+    <button class="btn-primary" bindtap="runProps">计算 Re / Pr / Nu</button>
+    <view wx:if="{{props}}" class="result">
+      <view class="kv-row"><text>Re</text><text>{{props.re}}</text></view>
+      <view class="kv-row"><text>Pr</text><text>{{props.pr}}</text></view>
+      <view class="kv-row"><text>Nu</text><text>{{props.nu}}</text></view>
+      <view class="kv-row"><text>h (W/m²K)</text><text>{{props.h}}</text></view>
+    </view>
+  </view>
+</view>
